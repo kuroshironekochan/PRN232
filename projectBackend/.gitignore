@@ -37,3 +37,9 @@ _ReSharper*/
 
 # VS Code workspace
 *.code-workspace
+
+# Configuration files (do not commit secrets)
+appsettings*.json
+/appsettings.json
+/projectBackend/appsettings.json
+projectBackend/appsettings*.json
