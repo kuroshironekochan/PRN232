@@ -7,7 +7,7 @@
 *.VC.db
 *.VC.VC.opendb
 
-# Build Folders
+# Build Folders (global)
 bin/
 obj/
 
@@ -40,6 +40,35 @@ _ReSharper*/
 
 # Configuration files (do not commit secrets)
 appsettings*.json
-/appsettings.json
 /projectBackend/appsettings.json
 projectBackend/appsettings*.json
+
+# Ignore build and generated folders for projectBackend
+/projectBackend/bin/
+projectBackend/bin/**
+/projectBackend/obj/
+projectBackend/obj/**
+
+# Ignore Copilot and indexes
+projectBackend/CopilotIndices/
+projectBackend/CopilotIndices/**
+
+# Ignore Visual Studio temporary files under projectBackend
+projectBackend/.vs/
+projectBackend/.vs/**
+
+# Ignore any database or cache files
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore binaries
+*.exe
+*.dll
+*.pdb
+
+# User-specific or IDE files in projectBackend
+projectBackend/*.user
+projectBackend/*.suo
+
+# End of file
