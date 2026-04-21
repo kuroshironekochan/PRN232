@@ -1,10 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\projectBackend\\",
+  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\projectbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{6EF75752-CF13-4FFC-B170-9AF208B83C12}|..\\projectFrontednd\\projectFrontednd.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectfrontednd\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF75752-CF13-4FFC-B170-9AF208B83C12}|..\\projectFrontednd\\projectFrontednd.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectfrontednd\\models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF75752-CF13-4FFC-B170-9AF208B83C12}|..\\projectFrontednd\\projectFrontednd.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectfrontednd\\views\\nhanvien\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF75752-CF13-4FFC-B170-9AF208B83C12}|..\\projectFrontednd\\projectFrontednd.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectfrontednd\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EF75752-CF13-4FFC-B170-9AF208B83C12}|..\\projectFrontednd\\projectFrontednd.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectfrontednd\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\models\\thuexemaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:models\\thuexemaycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\dto\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:dto\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\learn\\season 8\\prn232\\project\\prn232\\projectbackend\\models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:models\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +66,147 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\projectBackend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\projectBackend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-14T09:56:19.218Z",
+              "Title": "NhanVienDAO.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\DAO\\NhanVienDAO.cs",
+              "RelativeDocumentMoniker": "..\\projectFrontednd\\DAO\\NhanVienDAO.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\DAO\\NhanVienDAO.cs",
+              "RelativeToolTip": "..\\projectFrontednd\\DAO\\NhanVienDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T09:19:26.855Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Models\\NhanVien.cs",
+              "RelativeDocumentMoniker": "..\\projectFrontednd\\Models\\NhanVien.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Models\\NhanVien.cs",
+              "RelativeToolTip": "..\\projectFrontednd\\Models\\NhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T09:14:05.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
+              "RelativeToolTip": "..\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-20T09:12:52.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "..\\projectFrontednd\\Controllers\\NhanVienController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "..\\projectFrontednd\\Controllers\\NhanVienController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T09:11:47.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-20T09:07:01.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\projectFrontednd\\appsettings.json",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\appsettings.json",
+              "RelativeToolTip": "..\\projectFrontednd\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-20T09:05:32.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NhanVienDAO.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\DTO\\NhanVienDAO.cs",
+              "RelativeDocumentMoniker": "DTO\\NhanVienDAO.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\DTO\\NhanVienDAO.cs",
+              "RelativeToolTip": "DTO\\NhanVienDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T08:00:05.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NhanVienController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Controllers\\NhanVienController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NhanVienController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Controllers\\NhanVienController.cs",
+              "RelativeToolTip": "Controllers\\NhanVienController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAswJcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T10:05:02.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThuexemayContext.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Models\\ThuexemayContext.cs",
+              "RelativeDocumentMoniker": "Models\\ThuexemayContext.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Models\\ThuexemayContext.cs",
+              "RelativeToolTip": "Models\\ThuexemayContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T10:00:29.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-14T09:56:19.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Models\\NhanVien.cs",
+              "RelativeDocumentMoniker": "Models\\NhanVien.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Models\\NhanVien.cs",
+              "RelativeToolTip": "Models\\NhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T08:01:10.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectBackend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T08:30:13.562Z"
             }
           ]
         }

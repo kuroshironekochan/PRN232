@@ -1,0 +1,55 @@
+﻿@model IEnumerable<projectFrontednd.DAO.NhanVienDAO>
+
+@{
+    ViewData["Title"] = "Danh Sách Nhân Viên";
+}
+
+<h1>Danh Sách Nhân Viên</h1>
+
+<p>
+    <a asp-action="Create">Thêm mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Mã nhân viên</label>
+            </th>
+            <th>
+               <label>Họ và Tên</label>
+            </th>
+            <th>
+               <label>Địa chỉ</label>
+            </th>
+            <th>
+                <label>Số điện thoại</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maNhanVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hoTen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.diaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.soDienThoai)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.maNhanVien }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.maNhanVien }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.maNhanVien })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

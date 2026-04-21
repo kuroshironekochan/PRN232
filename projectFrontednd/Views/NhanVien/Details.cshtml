@@ -1,0 +1,47 @@
+﻿@model projectFrontednd.DAO.NhanVienDAO
+
+@{
+    ViewData["Title"] = "Chi Tiết Nhân Viên";
+}
+
+<h1>Chi Tiết Nhân Viên</h1>
+
+<div>
+    <h4>Thông Tin Nhân Viên</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Mã nhân viên</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maNhanVien)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Họ và Tên</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hoTen)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Địa chỉ</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.diaChi)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Số điện thoại</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.soDienThoai)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.maNhanVien }) |
+    @Html.ActionLink("Xóa", "Delete", new { id = Model.maNhanVien }) |
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>

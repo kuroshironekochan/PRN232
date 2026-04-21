@@ -1,5 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using projectBackend.DTO;
+
+using projectBackend.Models;
+using static projectBackend.DTO.NhanVienDAO;
 
 namespace projectBackend.Controllers
 {
@@ -7,5 +12,154 @@ namespace projectBackend.Controllers
     [ApiController]
     public class NhanVienController : ControllerBase
     {
+        private readonly ThuexemayContext _dbContext;
+        public NhanVienController(ThuexemayContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ReadNhanVien>>> GetNhanVien()
+        {
+            var nhanvien = await _dbContext.NhanViens
+                .Select(a => new ReadNhanVien()
+                {
+                    MaNhanVien = a.MaNhanVien,
+                    DiaChi = a.DiaChi,
+                    HoTen = a.HoTen,
+                    SoDienThoai = a.SoDienThoai,
+                })
+                .ToListAsync();
+
+            if (nhanvien == null || nhanvien.Count == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(nhanvien);
+            }
+        }
+
+        //get by id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ReadNhanVien>> GetNhanVienById(int id)
+        {
+            var nhanvien = await _dbContext.NhanViens
+                .Select(a => new ReadNhanVien()
+                {
+                    MaNhanVien = a.MaNhanVien,
+                    DiaChi = a.DiaChi,
+                    HoTen = a.HoTen,
+                    SoDienThoai = a.SoDienThoai,
+                })
+                .FirstOrDefaultAsync(a => a.MaNhanVien == id);
+
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(nhanvien);
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ReadNhanVien>> CreateNhanVien([FromBody] ReadNhanVien nhanvien)
+        {
+            var nvExist = _dbContext.NhanViens.Any(a => a.MaNhanVien == nhanvien.MaNhanVien);
+            if (nvExist) { return Conflict(); }
+            else
+            {
+                try
+                {
+                    var nv = new NhanVien()
+                    {
+                        MaNhanVien = nhanvien.MaNhanVien,
+                        DiaChi = nhanvien.DiaChi,
+                        HoTen = nhanvien.HoTen,
+                        SoDienThoai = nhanvien.SoDienThoai,
+                    };
+                    _dbContext.NhanViens.Add(nv);
+                    await _dbContext.SaveChangesAsync();
+                    var url = Url.Link("GetAccountById", new { id = nhanvien.MaNhanVien });
+
+                    var readAccount = new ReadNhanVien()
+                    {
+                        MaNhanVien = nhanvien.MaNhanVien,
+                        DiaChi = nhanvien.DiaChi,
+                        HoTen = nhanvien.HoTen,
+                        SoDienThoai = nhanvien.SoDienThoai,
+                    };
+                    return Created(url, readAccount);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest();
+                }
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<ReadNhanVien>> UpdateNhanVien(int id, [FromBody] ReadNhanVien nhanvien)
+        {
+            var nv = _dbContext.NhanViens.FirstOrDefault(a => a.MaNhanVien == id);
+            if (nv == null) { return NotFound(); }
+            else
+            {
+                try
+                {
+                    nv.DiaChi = nhanvien.DiaChi;
+                    nv.HoTen = nhanvien.HoTen;
+                    nv.SoDienThoai = nhanvien.SoDienThoai;
+
+                    _dbContext.NhanViens.Update(nv);
+                    await _dbContext.SaveChangesAsync();
+
+                    var readNhanVien = new ReadNhanVien()
+                    {
+                        MaNhanVien = nhanvien.MaNhanVien,
+                        DiaChi = nhanvien.DiaChi,
+                        HoTen = nhanvien.HoTen,
+                        SoDienThoai = nhanvien.SoDienThoai,
+                    };
+                    return Ok(readNhanVien);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest();
+                }
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ReadNhanVien>> UpdateDelete(int id)
+        {
+            var nv = await _dbContext.NhanViens.FirstOrDefaultAsync(a => a.MaNhanVien == id);
+            if (nv == null) { return NotFound(); }
+            else
+            {
+                try
+                {
+                    _dbContext.NhanViens.Remove(nv);
+                    await _dbContext.SaveChangesAsync();
+
+                    var readNhanVien = new ReadNhanVien()
+                    {
+                        MaNhanVien = nv.MaNhanVien,
+                        DiaChi = nv.DiaChi,
+                        HoTen = nv.HoTen,
+                        SoDienThoai = nv.SoDienThoai,
+                    };
+                    return Ok(readNhanVien);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest();
+                }
+            }
+        }
+
     }
 }
