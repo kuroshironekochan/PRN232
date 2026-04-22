@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using projectBackend.DTO;
-using projectBackend.DTOs;
 using projectBackend.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -102,29 +101,42 @@ namespace projectBackend.Controllers
 
         // PUT: api/ThueXeTheoGio/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, ThueXeTheoGio model)
+        public async Task<ActionResult<ThueXeTheoGioDto>> Update(int id, [FromBody] ThueXeTheoGioDto model)
         {
-            if (model == null || id != model.MaThue)
+            if (model == null)
                 return BadRequest();
 
-            var exists = await _context.ThueXeTheoGios.AnyAsync(t => t.MaThue == id);
-            if (!exists)
+            var entity = await _context.ThueXeTheoGios.FirstOrDefaultAsync(t => t.MaThue == id);
+            if (entity == null)
                 return NotFound();
-
-            _context.Entry(model).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.ThueXeTheoGios.AnyAsync(e => e.MaThue == id))
-                    return NotFound();
-                throw;
-            }
+                entity.MaKhachHang = model.MaKhachHang;
+                entity.MaXe = model.MaXe;
+                entity.MaNhanVien = model.MaNhanVien;
+                entity.ThoiGianBatDau = model.ThoiGianBatDau;
+                entity.ThoiGianKetThuc = model.ThoiGianKetThuc;
 
-            return NoContent();
+                _context.ThueXeTheoGios.Update(entity);
+                await _context.SaveChangesAsync();
+
+                var read = new ThueXeTheoGioDto
+                {
+                    MaThue = entity.MaThue,
+                    MaKhachHang = entity.MaKhachHang ?? 0,
+                    MaXe = entity.MaXe ?? 0,
+                    MaNhanVien = entity.MaNhanVien ?? 0,
+                    ThoiGianBatDau = entity.ThoiGianBatDau ?? System.DateTime.MinValue,
+                    ThoiGianKetThuc = entity.ThoiGianKetThuc ?? System.DateTime.MinValue
+                };
+
+                return Ok(read);
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE: api/ThueXeTheoGio/5

@@ -1,4 +1,4 @@
-﻿namespace projectBackend.DTOs
+﻿namespace projectBackend.DTO
 {
     public class ThueXeTheoNgayDto
     {

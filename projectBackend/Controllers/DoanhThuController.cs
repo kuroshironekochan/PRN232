@@ -100,29 +100,43 @@ namespace projectBackend.Controllers
 
         // PUT: api/DoanhThu/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, DoanhThu model)
+        public async Task<ActionResult<DoanhThuDto>> Update(int id, [FromBody] DoanhThuDto model)
         {
-            if (model == null || id != model.MaHoaDon)
+            if (model == null)
                 return BadRequest();
 
-            var exists = await _context.DoanhThus.AnyAsync(d => d.MaHoaDon == id);
-            if (!exists)
+            var entity = await _context.DoanhThus.FirstOrDefaultAsync(d => d.MaHoaDon == id);
+            if (entity == null)
                 return NotFound();
-
-            _context.Entry(model).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.DoanhThus.AnyAsync(e => e.MaHoaDon == id))
-                    return NotFound();
-                throw;
-            }
+                // update fields
+                entity.MaKhachHang = model.MaKhachHang;
+                entity.MaXe = model.MaXe;
+                entity.MaNhanVien = model.MaNhanVien;
+                entity.NgayThanhToan = model.NgayThanhToan;
+                entity.SoTien = model.SoTien;
 
-            return NoContent();
+                _context.DoanhThus.Update(entity);
+                await _context.SaveChangesAsync();
+
+                var read = new DoanhThuDto
+                {
+                    MaHoaDon = entity.MaHoaDon,
+                    MaKhachHang = entity.MaKhachHang ?? 0,
+                    MaXe = entity.MaXe ?? 0,
+                    MaNhanVien = entity.MaNhanVien ?? 0,
+                    NgayThanhToan = entity.NgayThanhToan ?? System.DateOnly.MinValue,
+                    SoTien = entity.SoTien ?? 0m
+                };
+
+                return Ok(read);
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE: api/DoanhThu/5

@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using projectBackend.Models;
 using projectBackend.DTO;
-using projectBackend.DTOs;
 
 namespace projectBackend.Controllers
 {
@@ -102,29 +101,42 @@ namespace projectBackend.Controllers
 
         // PUT: api/ThueXeNhieuNgay/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, ThueXeNhieuNgay model)
+        public async Task<ActionResult<ThueXeTheoNgayDto>> Update(int id, [FromBody] ThueXeTheoNgayDto model)
         {
-            if (model == null || id != model.MaThue)
+            if (model == null)
                 return BadRequest();
 
-            var exists = await _context.ThueXeNhieuNgays.AnyAsync(t => t.MaThue == id);
-            if (!exists)
+            var entity = await _context.ThueXeNhieuNgays.FirstOrDefaultAsync(t => t.MaThue == id);
+            if (entity == null)
                 return NotFound();
-
-            _context.Entry(model).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.ThueXeNhieuNgays.AnyAsync(e => e.MaThue == id))
-                    return NotFound();
-                throw;
-            }
+                entity.MaKhachHang = model.MaKhachHang;
+                entity.MaXe = model.MaXe;
+                entity.MaNhanVien = model.MaNhanVien;
+                entity.NgayBatDau = model.NgayBatDau;
+                entity.NgayKetThuc = model.NgayKetThuc;
 
-            return NoContent();
+                _context.ThueXeNhieuNgays.Update(entity);
+                await _context.SaveChangesAsync();
+
+                var read = new ThueXeTheoNgayDto
+                {
+                    MaThue = entity.MaThue,
+                    MaKhachHang = entity.MaKhachHang ?? 0,
+                    MaXe = entity.MaXe ?? 0,
+                    MaNhanVien = entity.MaNhanVien ?? 0,
+                    NgayBatDau = entity.NgayBatDau ?? System.DateOnly.MinValue,
+                    NgayKetThuc = entity.NgayKetThuc ?? System.DateOnly.MinValue
+                };
+
+                return Ok(read);
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
         }
 
         // DELETE: api/ThueXeNhieuNgay/5
