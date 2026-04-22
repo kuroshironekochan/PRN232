@@ -4013,11 +4013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
       "projectName": "projectFrontednd",
-      "projectPath": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
+      "projectPath": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\obj\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectFrontednd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -19,10 +19,10 @@ namespace projectBackend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ReadNhanVien>>> GetNhanVien()
+        public async Task<ActionResult<IEnumerable<ReadNhanVienDTO>>> GetNhanVien()
         {
             var nhanvien = await _dbContext.NhanViens
-                .Select(a => new ReadNhanVien()
+                .Select(a => new ReadNhanVienDTO()
                 {
                     MaNhanVien = a.MaNhanVien,
                     DiaChi = a.DiaChi,
@@ -43,10 +43,10 @@ namespace projectBackend.Controllers
 
         //get by id
         [HttpGet("{id}")]
-        public async Task<ActionResult<ReadNhanVien>> GetNhanVienById(int id)
+        public async Task<ActionResult<ReadNhanVienDTO>> GetNhanVienById(int id)
         {
             var nhanvien = await _dbContext.NhanViens
-                .Select(a => new ReadNhanVien()
+                .Select(a => new ReadNhanVienDTO()
                 {
                     MaNhanVien = a.MaNhanVien,
                     DiaChi = a.DiaChi,
@@ -66,7 +66,7 @@ namespace projectBackend.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ReadNhanVien>> CreateNhanVien([FromBody] ReadNhanVien nhanvien)
+        public async Task<ActionResult<ReadNhanVienDTO>> CreateNhanVien([FromBody] ReadNhanVienDTO nhanvien)
         {
             var nvExist = _dbContext.NhanViens.Any(a => a.MaNhanVien == nhanvien.MaNhanVien);
             if (nvExist) { return Conflict(); }
@@ -85,7 +85,7 @@ namespace projectBackend.Controllers
                     await _dbContext.SaveChangesAsync();
                     var url = Url.Link("GetAccountById", new { id = nhanvien.MaNhanVien });
 
-                    var readAccount = new ReadNhanVien()
+                    var readAccount = new ReadNhanVienDTO()
                     {
                         MaNhanVien = nhanvien.MaNhanVien,
                         DiaChi = nhanvien.DiaChi,
@@ -102,7 +102,7 @@ namespace projectBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<ReadNhanVien>> UpdateNhanVien(int id, [FromBody] ReadNhanVien nhanvien)
+        public async Task<ActionResult<ReadNhanVienDTO>> UpdateNhanVien(int id, [FromBody] ReadNhanVienDTO nhanvien)
         {
             var nv = _dbContext.NhanViens.FirstOrDefault(a => a.MaNhanVien == id);
             if (nv == null) { return NotFound(); }
@@ -117,7 +117,7 @@ namespace projectBackend.Controllers
                     _dbContext.NhanViens.Update(nv);
                     await _dbContext.SaveChangesAsync();
 
-                    var readNhanVien = new ReadNhanVien()
+                    var readNhanVien = new ReadNhanVienDTO()
                     {
                         MaNhanVien = nhanvien.MaNhanVien,
                         DiaChi = nhanvien.DiaChi,
@@ -134,7 +134,7 @@ namespace projectBackend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ReadNhanVien>> UpdateDelete(int id)
+        public async Task<ActionResult<ReadNhanVienDTO>> UpdateDelete(int id)
         {
             var nv = await _dbContext.NhanViens.FirstOrDefaultAsync(a => a.MaNhanVien == id);
             if (nv == null) { return NotFound(); }
@@ -145,7 +145,7 @@ namespace projectBackend.Controllers
                     _dbContext.NhanViens.Remove(nv);
                     await _dbContext.SaveChangesAsync();
 
-                    var readNhanVien = new ReadNhanVien()
+                    var readNhanVien = new ReadNhanVienDTO()
                     {
                         MaNhanVien = nv.MaNhanVien,
                         DiaChi = nv.DiaChi,

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1TURv6JlCf0=",
+  "dgSpecHash": "bL2i8dnF3kI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectFrontednd\\projectFrontednd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

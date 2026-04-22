@@ -1,13 +1,15 @@
 ﻿namespace projectBackend.DTO
 {
-    public class NhanVienDAO
+    public class KhachHangDTO
     {
     }
-    public class ReadNhanVienDTO()
+
+    public class ReadKhachHangDTO()
     {
-        public int MaNhanVien { get; set; }
+        public int MaKhachHang { get; set; }
         public string? HoTen { get; set; }
         public string? DiaChi { get; set; }
         public string? SoDienThoai { get; set; }
+
     }
 }
