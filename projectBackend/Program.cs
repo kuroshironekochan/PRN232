@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 using projectBackend.Models;
 using Microsoft.EntityFrameworkCore;
-=======
-using Microsoft.EntityFrameworkCore;
-using projectBackend.Models;
->>>>>>> origin/Quan
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<ThuexemayContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyCnn"))
-<<<<<<< HEAD
     );
-=======
-);
->>>>>>> origin/Quan
 builder.Services.AddScoped(typeof(ThuexemayContext));
 
 builder.Services.AddControllers();

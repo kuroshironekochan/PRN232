@@ -9,21 +9,17 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = projectBackend
 build_property.RootNamespace = projectBackend
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\pc\Desktop\learn\season 8\PRN232\project\PRN232\projectBackend\
-=======
-build_property.ProjectDir = C:\Users\Admin\source\repos\PRN232\projectBackend\
->>>>>>> origin/Quan
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\pc\Desktop\learn\season 8\PRN232\project\PRN232\projectBackend
-=======
-build_property.MSBuildProjectDirectory = C:\Users\Admin\source\repos\PRN232\projectBackend
->>>>>>> origin/Quan
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/pc/AppData/Roaming/SonarLint for Visual Studio/.global/csharp/SonarLint.xml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 

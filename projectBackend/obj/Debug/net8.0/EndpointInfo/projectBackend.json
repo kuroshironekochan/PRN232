@@ -224,6 +224,376 @@
         }
       }
     },
+    "/api/ThueXeNhieuNgay": {
+      "get": {
+        "tags": [
+          "ThueXeNhieuNgay"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ThueXeNhieuNgay"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeNhieuNgay"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeNhieuNgay"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeNhieuNgay"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ThueXeNhieuNgay/{id}": {
+      "get": {
+        "tags": [
+          "ThueXeNhieuNgay"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoNgayDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ThueXeNhieuNgay"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeNhieuNgay"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ThueXeNhieuNgay"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ThueXeTheoGio": {
+      "get": {
+        "tags": [
+          "ThueXeTheoGio"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ThueXeTheoGio"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGio"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGio"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGio"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ThueXeTheoGio/{id}": {
+      "get": {
+        "tags": [
+          "ThueXeTheoGio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThueXeTheoGioDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ThueXeTheoGio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThueXeTheoGio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ThueXeTheoGio"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -266,6 +636,136 @@
   },
   "components": {
     "schemas": {
+      "DoanhThu": {
+        "type": "object",
+        "properties": {
+          "maHoaDon": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maXe": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ngayThanhToan": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "soTien": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maKhachHangNavigation": {
+            "$ref": "#/components/schemas/KhachHang"
+          },
+          "maNhanVienNavigation": {
+            "$ref": "#/components/schemas/NhanVien"
+          },
+          "maXeNavigation": {
+            "$ref": "#/components/schemas/XeMay"
+          }
+        },
+        "additionalProperties": false
+      },
+      "KhachHang": {
+        "type": "object",
+        "properties": {
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hoTen": {
+            "type": "string",
+            "nullable": true
+          },
+          "diaChi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soDienThoai": {
+            "type": "string",
+            "nullable": true
+          },
+          "doanhThus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoanhThu"
+            },
+            "nullable": true
+          },
+          "thueXeNhieuNgays": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeNhieuNgay"
+            },
+            "nullable": true
+          },
+          "thueXeTheoGios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeTheoGio"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NhanVien": {
+        "type": "object",
+        "properties": {
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hoTen": {
+            "type": "string",
+            "nullable": true
+          },
+          "diaChi": {
+            "type": "string",
+            "nullable": true
+          },
+          "soDienThoai": {
+            "type": "string",
+            "nullable": true
+          },
+          "doanhThus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoanhThu"
+            },
+            "nullable": true
+          },
+          "thueXeNhieuNgays": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeNhieuNgay"
+            },
+            "nullable": true
+          },
+          "thueXeTheoGios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeTheoGio"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ReadNhanVien": {
         "type": "object",
         "properties": {
@@ -288,6 +788,154 @@
         },
         "additionalProperties": false
       },
+      "ThueXeNhieuNgay": {
+        "type": "object",
+        "properties": {
+          "maThue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maXe": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ngayBatDau": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "ngayKetThuc": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "maKhachHangNavigation": {
+            "$ref": "#/components/schemas/KhachHang"
+          },
+          "maNhanVienNavigation": {
+            "$ref": "#/components/schemas/NhanVien"
+          },
+          "maXeNavigation": {
+            "$ref": "#/components/schemas/XeMay"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ThueXeTheoGio": {
+        "type": "object",
+        "properties": {
+          "maThue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maXe": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "thoiGianBatDau": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "thoiGianKetThuc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "maKhachHangNavigation": {
+            "$ref": "#/components/schemas/KhachHang"
+          },
+          "maNhanVienNavigation": {
+            "$ref": "#/components/schemas/NhanVien"
+          },
+          "maXeNavigation": {
+            "$ref": "#/components/schemas/XeMay"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ThueXeTheoGioDto": {
+        "type": "object",
+        "properties": {
+          "maThue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maXe": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "thoiGianBatDau": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "thoiGianKetThuc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ThueXeTheoNgayDto": {
+        "type": "object",
+        "properties": {
+          "maThue": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maKhachHang": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maXe": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maNhanVien": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ngayBatDau": {
+            "type": "string",
+            "format": "date"
+          },
+          "ngayKetThuc": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -306,6 +954,50 @@
           },
           "summary": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "XeMay": {
+        "type": "object",
+        "properties": {
+          "maXe": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tenXe": {
+            "type": "string",
+            "nullable": true
+          },
+          "hangXe": {
+            "type": "string",
+            "nullable": true
+          },
+          "giaThu": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "doanhThus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DoanhThu"
+            },
+            "nullable": true
+          },
+          "thueXeNhieuNgays": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeNhieuNgay"
+            },
+            "nullable": true
+          },
+          "thueXeTheoGios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThueXeTheoGio"
+            },
             "nullable": true
           }
         },
