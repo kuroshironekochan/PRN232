@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using projectBackend.DTOs;
+using projectBackend.DTO;
 using projectBackend.Models;
 using System.Collections.Generic;
 using System.Linq;

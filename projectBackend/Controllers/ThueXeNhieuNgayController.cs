@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using projectBackend.Models;
-using projectBackend.DTOs;
+using projectBackend.DTO;
 
 namespace projectBackend.Controllers
 {
