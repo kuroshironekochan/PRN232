@@ -73,33 +73,6 @@ namespace projectBackend.Controllers
             return CreatedAtAction(nameof(GetById), new { id = model.MaHoaDon }, model);
         }
 
-        // PUT: api/DoanhThu/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, DoanhThu model)
-        {
-            if (model == null || id != model.MaHoaDon)
-                return BadRequest();
-
-            var exists = await _context.DoanhThus.AnyAsync(d => d.MaHoaDon == id);
-            if (!exists)
-                return NotFound();
-
-            _context.Entry(model).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.DoanhThus.AnyAsync(e => e.MaHoaDon == id))
-                    return NotFound();
-                throw;
-            }
-
-            return NoContent();
-        }
-
         // DELETE: api/DoanhThu/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
