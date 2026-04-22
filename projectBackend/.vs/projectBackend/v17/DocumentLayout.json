@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\controllers\\thuexetheogiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:controllers\\thuexetheogiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\controllers\\thuexenhieungaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:controllers\\thuexenhieungaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\controllers\\xemaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:controllers\\xemaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\dto\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:dto\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\controllers\\thuexenhieungaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|solutionrelative:controllers\\thuexenhieungaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC8991DA-F0CB-4F02-9354-2A79FE85C0E0}|projectBackend.csproj|c:\\users\\pc\\desktop\\new folder\\new folder\\prn232\\projectbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,7 +85,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,33 +97,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "XeMay.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\XeMay.cs",
-              "RelativeDocumentMoniker": "Models\\XeMay.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\XeMay.cs",
-              "RelativeToolTip": "Models\\XeMay.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ThueXeTheoGioController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeTheoGioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ThueXeTheoGioController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeTheoGioController.cs",
+              "RelativeToolTip": "Controllers\\ThueXeTheoGioController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwC4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:43:22.694Z",
+              "WhenOpened": "2026-04-22T10:18:23.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KhachHang.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\KhachHang.cs",
-              "RelativeDocumentMoniker": "Models\\KhachHang.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\KhachHang.cs",
-              "RelativeToolTip": "Models\\KhachHang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:42:00.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "XeMayDTO.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\DTO\\XeMayDTO.cs",
               "RelativeDocumentMoniker": "DTO\\XeMayDTO.cs",
@@ -132,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "KhachHangDTO.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\DTO\\KhachHangDTO.cs",
               "RelativeDocumentMoniker": "DTO\\KhachHangDTO.cs",
@@ -145,20 +136,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "XeMayController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\XeMayController.cs",
               "RelativeDocumentMoniker": "Controllers\\XeMayController.cs",
               "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\XeMayController.cs",
               "RelativeToolTip": "Controllers\\XeMayController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAA/wFcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAwwFcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T09:40:46.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "KhachHangController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\KhachHangController.cs",
               "RelativeDocumentMoniker": "Controllers\\KhachHangController.cs",
@@ -171,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "NhanVienController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\NhanVienController.cs",
               "RelativeDocumentMoniker": "Controllers\\NhanVienController.cs",
@@ -184,7 +175,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
+              "Title": "ThueXeNhieuNgayController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeNhieuNgayController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ThueXeNhieuNgayController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeNhieuNgayController.cs",
+              "RelativeToolTip": "Controllers\\ThueXeNhieuNgayController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:34:41.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\KhachHang.cs",
+              "RelativeDocumentMoniker": "Models\\KhachHang.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\KhachHang.cs",
+              "RelativeToolTip": "Models\\KhachHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:42:00.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "XeMay.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\XeMay.cs",
+              "RelativeDocumentMoniker": "Models\\XeMay.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\XeMay.cs",
+              "RelativeToolTip": "Models\\XeMay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T09:43:22.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\appsettings.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\appsettings.json",
@@ -196,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "NhanVienDAO.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\DTO\\NhanVienDAO.cs",
               "RelativeDocumentMoniker": "DTO\\NhanVienDAO.cs",
@@ -209,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -221,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -233,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "NhanVienDAO.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\DAO\\NhanVienDAO.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\DAO\\NhanVienDAO.cs",
@@ -245,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -257,20 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ThueXeNhieuNgayController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeNhieuNgayController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ThueXeNhieuNgayController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Controllers\\ThueXeNhieuNgayController.cs",
-              "RelativeToolTip": "Controllers\\ThueXeNhieuNgayController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T09:34:41.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Views\\NhanVien\\Index.cshtml",
@@ -282,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "NhanVienController.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Controllers\\NhanVienController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Controllers\\NhanVienController.cs",
@@ -294,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "NhanVien.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Models\\NhanVien.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\learn\\season 8\\PRN232\\project\\PRN232\\projectFrontednd\\Models\\NhanVien.cs",
@@ -306,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ThuexemayContext.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\ThuexemayContext.cs",
               "RelativeDocumentMoniker": "Models\\ThuexemayContext.cs",
@@ -318,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "NhanVien.cs",
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\New folder\\New folder\\PRN232\\projectBackend\\Models\\NhanVien.cs",
               "RelativeDocumentMoniker": "Models\\NhanVien.cs",
