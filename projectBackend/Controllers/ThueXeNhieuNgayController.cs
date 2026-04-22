@@ -32,15 +32,15 @@ namespace projectBackend.Controllers
                     MaKhachHang = t.MaKhachHang ?? 0,
                     MaXe = t.MaXe ?? 0,
                     MaNhanVien = t.MaNhanVien ?? 0,
-                    NgayBatDau = (DateOnly)t.NgayBatDau,
-                    NgayKetThuc = (DateOnly)t.NgayKetThuc
+                    NgayBatDau = (System.DateOnly)t.NgayBatDau,
+                    NgayKetThuc = (System.DateOnly)t.NgayKetThuc
                 });
 
             return Ok(list);
         }
 
         // GET: api/ThueXeNhieuNgay/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetThueXeNhieuNgayById")]
         public async Task<ActionResult<ThueXeTheoNgayDto>> GetById(int id)
         {
             var theoNgay = await _context.ThueXeNhieuNgays
@@ -54,8 +54,8 @@ namespace projectBackend.Controllers
                     MaKhachHang = theoNgay.MaKhachHang ?? 0,
                     MaXe = theoNgay.MaXe ?? 0,
                     MaNhanVien = theoNgay.MaNhanVien ?? 0,
-                    NgayBatDau = (DateOnly)theoNgay.NgayBatDau,
-                    NgayKetThuc = (DateOnly)theoNgay.NgayKetThuc
+                    NgayBatDau = (System.DateOnly)theoNgay.NgayBatDau,
+                    NgayKetThuc = (System.DateOnly)theoNgay.NgayKetThuc
             };
 
             return Ok(item);
@@ -63,15 +63,40 @@ namespace projectBackend.Controllers
 
         // POST: api/ThueXeNhieuNgay
         [HttpPost]
-        public async Task<ActionResult<ThueXeNhieuNgay>> Create(ThueXeNhieuNgay model)
+        public async Task<ActionResult<ThueXeTheoNgayDto>> Create([FromBody] ThueXeTheoNgayDto model)
         {
             if (model == null)
                 return BadRequest();
 
-            _context.ThueXeNhieuNgays.Add(model);
+            var exists = await _context.ThueXeNhieuNgays.AnyAsync(a => a.MaThue == model.MaThue);
+            if (exists)
+                return Conflict();
+
+            var entity = new ThueXeNhieuNgay
+            {
+                MaThue = model.MaThue,
+                MaKhachHang = model.MaKhachHang,
+                MaXe = model.MaXe,
+                MaNhanVien = model.MaNhanVien,
+                NgayBatDau = model.NgayBatDau,
+                NgayKetThuc = model.NgayKetThuc
+            };
+
+            _context.ThueXeNhieuNgays.Add(entity);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetById), new { id = model.MaThue }, model);
+            var url = Url.Link("GetThueXeNhieuNgayById", new { id = entity.MaThue });
+            var read = new ThueXeTheoNgayDto
+            {
+                MaThue = entity.MaThue,
+                MaKhachHang = entity.MaKhachHang ?? 0,
+                MaXe = entity.MaXe ?? 0,
+                MaNhanVien = entity.MaNhanVien ?? 0,
+                NgayBatDau = (System.DateOnly)entity.NgayBatDau,
+                NgayKetThuc = (System.DateOnly)entity.NgayKetThuc
+            };
+
+            return Created(url, read);
         }
 
         // PUT: api/ThueXeNhieuNgay/5

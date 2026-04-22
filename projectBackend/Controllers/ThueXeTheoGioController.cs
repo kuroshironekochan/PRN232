@@ -32,15 +32,15 @@ namespace projectBackend.Controllers
                     MaKhachHang = t.MaKhachHang ?? 0,
                     MaXe = t.MaXe ?? 0,
                     MaNhanVien = t.MaNhanVien ?? 0,
-                    ThoiGianBatDau = (DateTime)t.ThoiGianBatDau,
-                    ThoiGianKetThuc = (DateTime)t.ThoiGianKetThuc
+                    ThoiGianBatDau = (System.DateTime)t.ThoiGianBatDau,
+                    ThoiGianKetThuc = (System.DateTime)t.ThoiGianKetThuc
                 });
 
             return Ok(list);
         }
 
         // GET: api/ThueXeTheoGio/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetThueXeTheoGioById")]
         public async Task<ActionResult<ThueXeTheoGioDto>> GetById(int id)
         {
             var theoGio = await _context.ThueXeTheoGios
@@ -54,8 +54,8 @@ namespace projectBackend.Controllers
                 MaKhachHang = theoGio.MaKhachHang ?? 0,
                 MaXe = theoGio.MaXe ?? 0,
                 MaNhanVien = theoGio.MaNhanVien ?? 0,
-                ThoiGianBatDau = (DateTime)theoGio.ThoiGianBatDau,
-                ThoiGianKetThuc = (DateTime)theoGio.ThoiGianKetThuc
+                ThoiGianBatDau = (System.DateTime)theoGio.ThoiGianBatDau,
+                ThoiGianKetThuc = (System.DateTime)theoGio.ThoiGianKetThuc
             };
 
             return Ok(item);
@@ -63,15 +63,40 @@ namespace projectBackend.Controllers
 
         // POST: api/ThueXeTheoGio
         [HttpPost]
-        public async Task<ActionResult<ThueXeTheoGio>> Create(ThueXeTheoGio model)
+        public async Task<ActionResult<ThueXeTheoGioDto>> Create([FromBody] ThueXeTheoGioDto model)
         {
             if (model == null)
                 return BadRequest();
 
-            _context.ThueXeTheoGios.Add(model);
+            var exists = await _context.ThueXeTheoGios.AnyAsync(a => a.MaThue == model.MaThue);
+            if (exists)
+                return Conflict();
+
+            var entity = new ThueXeTheoGio
+            {
+                MaThue = model.MaThue,
+                MaKhachHang = model.MaKhachHang,
+                MaXe = model.MaXe,
+                MaNhanVien = model.MaNhanVien,
+                ThoiGianBatDau = model.ThoiGianBatDau,
+                ThoiGianKetThuc = model.ThoiGianKetThuc
+            };
+
+            _context.ThueXeTheoGios.Add(entity);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetById), new { id = model.MaThue }, model);
+            var url = Url.Link("GetThueXeTheoGioById", new { id = entity.MaThue });
+            var read = new ThueXeTheoGioDto
+            {
+                MaThue = entity.MaThue,
+                MaKhachHang = entity.MaKhachHang ?? 0,
+                MaXe = entity.MaXe ?? 0,
+                MaNhanVien = entity.MaNhanVien ?? 0,
+                ThoiGianBatDau = (System.DateTime)entity.ThoiGianBatDau,
+                ThoiGianKetThuc = (System.DateTime)entity.ThoiGianKetThuc
+            };
+
+            return Created(url, read);
         }
 
         // PUT: api/ThueXeTheoGio/5
