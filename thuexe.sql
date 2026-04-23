@@ -1,5 +1,7 @@
 ﻿--create database thuexemay
 
+use thuexemay
+
 -- 1. Tạo bảng XeMay
 CREATE TABLE XeMay (
     MaXe INT PRIMARY KEY,
@@ -7,6 +9,8 @@ CREATE TABLE XeMay (
     HangXe NVARCHAR(50),
     GiaThu DECIMAL(18,2)
 );
+ALTER TABLE XeMay
+ADD Status INT DEFAULT 1;
 
 -- 2. Tạo bảng KhachHang
 CREATE TABLE KhachHang (

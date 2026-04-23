@@ -1,0 +1,46 @@
+﻿@model projectFrontednd.DAO.KhachHangDTO
+
+@{
+    ViewData["Title"] = "Chi Tiết Khách Hàng";
+}
+
+<h1>Chi Tiết Khách Hàng</h1>
+
+<div>
+    <h4>Thông Tin Khách Hàng</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Mã Khách Hàng</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maKhachHang)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Họ và Tên</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hoTen)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Địa chỉ</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.diaChi)
+        </dd>
+        
+        <dt class="col-sm-2">
+            <label>Số điện thoại</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.soDienThoai)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.maKhachHang })
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>
