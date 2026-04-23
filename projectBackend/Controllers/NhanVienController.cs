@@ -45,6 +45,12 @@ namespace projectBackend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ReadNhanVienDTO>> GetNhanVienById(int id)
         {
+            double total = 0;
+            var doanhthu = await _dbContext.DoanhThus.Where(a => a.MaNhanVien == id).ToListAsync();
+            foreach (var item in doanhthu)
+            {
+                total += (double)item.SoTien;
+            }
             var nhanvien = await _dbContext.NhanViens
                 .Select(a => new ReadNhanVienDTO()
                 {
@@ -52,6 +58,7 @@ namespace projectBackend.Controllers
                     DiaChi = a.DiaChi,
                     HoTen = a.HoTen,
                     SoDienThoai = a.SoDienThoai,
+                    DoanhThu = total,
                 })
                 .FirstOrDefaultAsync(a => a.MaNhanVien == id);
 
@@ -105,6 +112,7 @@ namespace projectBackend.Controllers
         public async Task<ActionResult<ReadNhanVienDTO>> UpdateNhanVien(int id, [FromBody] ReadNhanVienDTO nhanvien)
         {
             var nv = _dbContext.NhanViens.FirstOrDefault(a => a.MaNhanVien == id);
+
             if (nv == null) { return NotFound(); }
             else
             {
