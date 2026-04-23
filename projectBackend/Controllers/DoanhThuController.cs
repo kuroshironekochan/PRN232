@@ -60,6 +60,46 @@ namespace projectBackend.Controllers
             return Ok(dto);
         }
 
+        // GET: api/DoanhThu/search?maNhanVien=1&ngayThanhToan=2023-12-31
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<DoanhThuDto>>> Search([FromQuery] int? maNhanVien, [FromQuery] string? ngayThanhToan)
+        {
+            System.DateOnly? date = null;
+            if (!string.IsNullOrWhiteSpace(ngayThanhToan))
+            {
+                if (System.DateOnly.TryParse(ngayThanhToan, out var parsed))
+                {
+                    date = parsed;
+                }
+                else
+                {
+                    return BadRequest("Invalid date format. Use yyyy-MM-dd or a valid DateOnly format.");
+                }
+            }
+
+            var query = _context.DoanhThus.AsQueryable();
+
+            if (maNhanVien.HasValue)
+                query = query.Where(d => d.MaNhanVien == maNhanVien.Value);
+
+            if (date.HasValue)
+                query = query.Where(d => d.NgayThanhToan.HasValue && d.NgayThanhToan.Value == date.Value);
+
+            var items = await query.ToListAsync();
+
+            var list = items.Select(d => new DoanhThuDto
+            {
+                MaHoaDon = d.MaHoaDon,
+                MaKhachHang = d.MaKhachHang ?? 0,
+                MaXe = d.MaXe ?? 0,
+                MaNhanVien = d.MaNhanVien ?? 0,
+                NgayThanhToan = d.NgayThanhToan ?? System.DateOnly.MinValue,
+                SoTien = d.SoTien ?? 0m
+            });
+
+            return Ok(list);
+        }
+
         // POST: api/DoanhThu
         [HttpPost]
         public async Task<ActionResult<DoanhThuDto>> Create([FromBody] DoanhThuDto model)
