@@ -1,0 +1,60 @@
+﻿@model projectFrontednd.DAO.DoanhThuDto
+
+@{
+    ViewData["Title"] = "Chi Tiết Doanh Thu";
+}
+
+<h1>Chi Tiết Doanh Thu</h1>
+
+<div>
+    <h4>Thông Tin Hóa Đơn</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label>Mã Hóa Đơn</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maHoaDon)
+        </dd>
+
+        <dt class="col-sm-2">
+            <label>Mã Khách Hàng</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maKhachHang) - @ViewBag.TenKhachHang
+        </dd>
+
+        <dt class="col-sm-2">
+            <label>Mã Xe</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maXe) - @ViewBag.TenXe
+        </dd>
+
+        <dt class="col-sm-2">
+            <label>Mã Nhân Viên</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.maNhanVien) - @ViewBag.TenNhanVien
+        </dd>
+
+        <dt class="col-sm-2">
+            <label>Ngày Thanh Toán</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ngayThanhToan)
+        </dd>
+
+        <dt class="col-sm-2">
+            <label>Số Tiền</label>
+        </dt>
+        <dd class="col-sm-10">
+            @String.Format("{0:N0} VNĐ", Model.soTien)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.maHoaDon }) |
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>

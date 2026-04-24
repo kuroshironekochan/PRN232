@@ -4,11 +4,11 @@
     {
         public int maHoaDon { get; set; }
 
-        public string tenKhachHang { get; set; }
+        public int maKhachHang { get; set; }
 
-        public string tenXe { get; set; }
+        public int maXe { get; set; }
 
-        public string tenNhanVien { get; set; }
+        public int maNhanVien { get; set; }
 
         public DateOnly ngayThanhToan { get; set; }
 

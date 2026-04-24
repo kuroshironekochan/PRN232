@@ -1,0 +1,66 @@
+﻿@model IEnumerable<projectFrontednd.DAO.DoanhThuDto>
+
+@{
+    ViewData["Title"] = "Danh Sách Doanh Thu";
+}
+
+<h1>Danh Sách Doanh Thu</h1>
+
+<p>
+    <a asp-action="Create">Thêm mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Mã Hóa Đơn</label>
+            </th>
+            <th>
+                <label>Mã Khách Hàng</label>
+            </th>
+            <th>
+                <label>Mã Xe</label>
+            </th>
+            <th>
+                <label>Mã Nhân Viên</label>
+            </th>
+            <th>
+                <label>Ngày Thanh Toán</label>
+            </th>
+            <th>
+                <label>Số Tiền</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maHoaDon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maKhachHang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maXe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maNhanVien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ngayThanhToan)
+                </td>
+                <td>
+                    @String.Format("{0:N0} VNĐ", item.soTien)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.maHoaDon }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.maHoaDon })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

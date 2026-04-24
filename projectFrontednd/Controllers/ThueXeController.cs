@@ -6,9 +6,8 @@ using System.Text.Json;
 
 namespace projectFrontednd.Controllers
 {
-    public class DoanhThuController : Controller
+    public class ThueXeController : Controller
     {
-
         private string GetGivenApiBaseURL()
         {
             var config = new ConfigurationBuilder()
@@ -19,33 +18,34 @@ namespace projectFrontednd.Controllers
         }
         private readonly HttpClient _httpClient = new HttpClient();
 
-        // GET: DoanhThuController
+        // GET: ThueXeController
         public async Task<ActionResult> Index()
         {
             string baseUrl = GetGivenApiBaseURL();
             HttpResponseMessage response =
-                await _httpClient.GetAsync($"{baseUrl}/api/DoanhThu");
+                await _httpClient.GetAsync($"{baseUrl}/api/ThueXeTheoGio");
             string json = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { WriteIndented = true };
-            List<DoanhThuDto> user =
-                JsonSerializer.Deserialize<List<DoanhThuDto>>(json, option);
+            List<ThueXeTheoGioDto> user =
+                JsonSerializer.Deserialize<List<ThueXeTheoGioDto>>(json, option);
             return View(user);
         }
 
-        // GET: DoanhThuController/Details/5
+        // GET: ThueXeController/Details/5
         public async Task<ActionResult> Details(int id)
         {
             string baseUrl = GetGivenApiBaseURL();
             HttpResponseMessage response =
-                await _httpClient.GetAsync($"{baseUrl}/api/DoanhThu/{id}");
+                await _httpClient.GetAsync($"{baseUrl}/api/ThueXeTheoGio/{id}");
             string json = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { WriteIndented = true };
-            DoanhThuDto user =
-                JsonSerializer.Deserialize<DoanhThuDto>(json, option);
+            ThueXeTheoGioDto user =
+                JsonSerializer.Deserialize<ThueXeTheoGioDto>(json, option);
             return View(user);
         }
 
-        // GET: DoanhThuController/Create
+        // GET: ThueXeController/Create
+        // GET: NhanVienController/Create
         public async Task<ActionResult> Create()
         {
             return View();
@@ -54,22 +54,22 @@ namespace projectFrontednd.Controllers
         // POST: ProductController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind("maHoaDon")] DoanhThuDto user)
+        public async Task<ActionResult> Create([Bind("maThue")] ThueXeTheoGioDto product)
         {
             try
             {
-                string jsonProduct = JsonSerializer.Serialize(user);
+                string jsonProduct = JsonSerializer.Serialize(product);
                 var content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
                 string baseUrl = GetGivenApiBaseURL();
-                HttpResponseMessage response = await _httpClient.PostAsync($"{baseUrl}/api/DoanhThu", content);
+                HttpResponseMessage response = await _httpClient.PostAsync($"{baseUrl}/api/ThueXeTheoGio", content);
 
                 string result = await response.Content.ReadAsStringAsync();
                 var option = new JsonSerializerOptions { WriteIndented = true };
-                DoanhThuDto addUser =
-                    JsonSerializer.Deserialize<DoanhThuDto>(result, option);
+                ThueXeTheoGioDto addedProduct =
+                    JsonSerializer.Deserialize<ThueXeTheoGioDto>(result, option);
 
                 //return RedirectToAction(nameof(Index));
-                return View("Details", addUser);
+                return View("Details", addedProduct);
             }
             catch (Exception ex)
             {
@@ -77,44 +77,44 @@ namespace projectFrontednd.Controllers
             }
         }
 
-        // GET: DoanhThuController/Edit/5
+        // GET: ThueXeController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
             string baseUrl = GetGivenApiBaseURL();
             HttpResponseMessage response =
-                await _httpClient.GetAsync($"{baseUrl}/api/DoanhThu/{id}");
+                await _httpClient.GetAsync($"{baseUrl}/api/ThueXeTheoGio/{id}");
             string json = await response.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions { WriteIndented = true };
-            DoanhThuDto user =
-                JsonSerializer.Deserialize<DoanhThuDto>(json, option);
+            ThueXeTheoGioDto user =
+                JsonSerializer.Deserialize<ThueXeTheoGioDto>(json, option);
             return View(user);
         }
 
         // POST: ProductController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, [Bind("maHoaDon,maKhachHang,maXe,maNhanVien,ngayThanhToan,soTien")] DoanhThuDto user)
+        public async Task<ActionResult> Edit(int id, [Bind("maThue,maKhachHang,maXe,maNhanVien,thoiGianBatDau,thoiGianKetThuc")] ThueXeTheoGioDto user)
         {
             try
             {
                 var updateProduct = new
                 {
-                    maHoaDon = user.maHoaDon,
+                    maThue = user.maThue,
                     maKhachHang = user.maKhachHang,
                     maXe = user.maXe,
                     maNhanVien = user.maNhanVien,
-                    ngayThanhToan = user.ngayThanhToan,
-                    soTien = user.soTien,
+                    thoiGianBatDau = user.thoiGianBatDau,
+                    thoiGianKetThuc = user.thoiGianKetThuc,
                 };
                 string jsonProduct = JsonSerializer.Serialize(updateProduct);
                 var content = new StringContent(jsonProduct, Encoding.UTF8, "application/json");
                 string baseUrl = GetGivenApiBaseURL();
-                HttpResponseMessage response = await _httpClient.PutAsync($"{baseUrl}/api/DoanhThu/{id}", content);
+                HttpResponseMessage response = await _httpClient.PutAsync($"{baseUrl}/api/ThueXeTheoGio/{id}", content);
 
                 string result = await response.Content.ReadAsStringAsync();
                 var option = new JsonSerializerOptions { WriteIndented = true };
-                DoanhThuDto updatedUser =
-                    JsonSerializer.Deserialize<DoanhThuDto>(result, option);
+                ThueXeTheoGioDto updatedUser =
+                    JsonSerializer.Deserialize<ThueXeTheoGioDto>(result, option);
 
                 //return RedirectToAction(nameof(Index));
                 return View("Details", updatedUser);
@@ -124,6 +124,5 @@ namespace projectFrontednd.Controllers
                 return View();
             }
         }
-
     }
 }

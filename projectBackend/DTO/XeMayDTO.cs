@@ -10,5 +10,6 @@
         public string? TenXe { get; set; }
         public string? HangXe { get; set; }
         public decimal? GiaThu { get; set; }
+
     }
 }

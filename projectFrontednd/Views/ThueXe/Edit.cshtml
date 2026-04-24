@@ -1,0 +1,67 @@
+﻿@model projectFrontednd.DAO.ThueXeTheoGioDto
+
+@{
+    ViewData["Title"] = "Sửa Thuê Xe Theo Giờ";
+}
+
+<h1>Sửa Thuê Xe Theo Giờ</h1>
+
+<h4>Thông Tin Thuê Xe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="maThue" class="control-label"></label>
+                <input asp-for="maThue" class="form-control" readonly />
+                <span asp-validation-for="maThue" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="maKhachHang" class="control-label"></label>
+                <input asp-for="maKhachHang" class="form-control" />
+                <span asp-validation-for="maKhachHang" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="maXe" class="control-label"></label>
+                <input asp-for="maXe" class="form-control" />
+                <span asp-validation-for="maXe" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="maNhanVien" class="control-label"></label>
+                <input asp-for="maNhanVien" class="form-control" />
+                <span asp-validation-for="maNhanVien" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="thoiGianBatDau" class="control-label"></label>
+                <input asp-for="thoiGianBatDau" class="form-control" type="datetime-local" />
+                <span asp-validation-for="thoiGianBatDau" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="thoiGianKetThuc" class="control-label"></label>
+                <input asp-for="thoiGianKetThuc" class="form-control" type="datetime-local" />
+                <span asp-validation-for="thoiGianKetThuc" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

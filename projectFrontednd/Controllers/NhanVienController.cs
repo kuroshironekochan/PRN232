@@ -123,39 +123,5 @@ namespace projectFrontednd.Controllers
                 return View();
             }
         }
-
-        // GET: NhanVienController/Delete/5
-        public async Task<ActionResult> Delete(int id)
-        {
-            string baseUrl = GetGivenApiBaseURL();
-            HttpResponseMessage response =
-                await _httpClient.GetAsync($"{baseUrl}/api/NhanVien/{id}");
-            string json = await response.Content.ReadAsStringAsync();
-            var option = new JsonSerializerOptions { WriteIndented = true };
-            NhanVienDAO product =
-                JsonSerializer.Deserialize<NhanVienDAO>(json, option);
-            return View(product);
-        }
-
-        // POST: ProductController/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<string> DeleteConfirmed(int id)
-        {
-            try
-            {
-                string baseUrl = GetGivenApiBaseURL();
-                HttpResponseMessage response = await _httpClient.DeleteAsync($"{baseUrl}/api/NhanVien/{id}");
-                string result = await response.Content.ReadAsStringAsync();
-
-                //return RedirectToAction(nameof(Index));
-                return result;
-            }
-            catch (Exception ex)
-            {
-                //return View();
-                return ex.Message;
-            }
-        }
     }
 }
