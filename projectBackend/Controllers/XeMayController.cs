@@ -67,6 +67,9 @@ namespace projectBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<ReadXeMayDTO>> CreateNhanVien([FromBody] ReadXeMayDTO xemay)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var nvExist = _dbContext.XeMays.Any(a => a.MaXe == xemay.MaXe);
             if (nvExist) { return Conflict(); }
             else

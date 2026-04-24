@@ -68,6 +68,17 @@ namespace projectBackend.Controllers
             if (model == null)
                 return BadRequest();
 
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Validation: start date must not be earlier than today, end date must not be earlier than start date
+            var today = System.DateOnly.FromDateTime(System.DateTime.Now);
+            if (model.NgayBatDau < today)
+                return BadRequest("Ngày b?t ??u ph?i l?n h?n ho?c b?ng ngày hi?n t?i.");
+
+            if (model.NgayKetThuc < model.NgayBatDau)
+                return BadRequest("Ngày k?t thúc ph?i l?n h?n ho?c b?ng ngày b?t ??u.");
+
             var exists = await _context.ThueXeNhieuNgays.AnyAsync(a => a.MaThue == model.MaThue);
             if (exists)
                 return Conflict();

@@ -75,6 +75,9 @@ namespace projectBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<ReadNhanVienDTO>> CreateNhanVien([FromBody] ReadNhanVienDTO nhanvien)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var nvExist = _dbContext.NhanViens.Any(a => a.MaNhanVien == nhanvien.MaNhanVien);
             if (nvExist) { return Conflict(); }
             else

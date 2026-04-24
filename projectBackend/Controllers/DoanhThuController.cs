@@ -104,6 +104,9 @@ namespace projectBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<DoanhThuDto>> Create([FromBody] DoanhThuDto model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             if (model == null)
                 return BadRequest();
 

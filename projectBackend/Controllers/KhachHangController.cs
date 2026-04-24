@@ -68,6 +68,9 @@ namespace projectBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<ReadKhachHangDTO>> CreateKhachHang([FromBody] ReadKhachHangDTO khachhang)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var nvExist = _dbContext.KhachHangs.Any(a => a.MaKhachHang == khachhang.MaKhachHang);
             if (nvExist) { return Conflict(); }
             else
